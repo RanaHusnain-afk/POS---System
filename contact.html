@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="contact.css" />
+    <title>POS - Contact</title>
+  </head>
+  <body>
+
+    <div class="navbar">
+      <div class="logo-container">
+        <p class="brand-name">POS System</p>
+      </div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Contact Us</h1>
+        <p>Contact us for any quries and delivery status!</p>
+      </div>
+    </div>
+
+    
+    <div class="contact-form-section">
+      <form id="contactForm" class="contact-form" action="#" method="post">
+        <h2>Send Us a Message</h2>
+
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name"  />
+        <span class="error-message" id="nameError"></span>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" />
+        <span class="error-message" id="emailError"></span>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+        <span class="error-message" id="messageError"></span>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+   
+    <footer>
+      <p>&copy; 2025 POS-System. All rights reserved.</p>
+    </footer>
+  </body>
+  <script src="contact.js"></script>
+</html>
+

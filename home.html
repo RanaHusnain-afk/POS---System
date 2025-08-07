@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POS - Home</title>
+
+    <link rel="stylesheet" href="home.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <h1 class="logo-text">POS System</h1>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="home.html" class="active">Home</a></li>
+
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to Your Point of Sale Dashboard</h1>
+
+        <p>Manage your categories, products, and inventory all in one place.</p>
+        <a href="#categoryDiv" class="hero-btn">Get Started</a>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="buttons">
+        <button id="addCategoryBtn">Add Category</button>
+        <button id="addProductBtn">Add Product</button>
+        <button id="searchProductBtn">Search Product</button>
+        <button id="printBillBtn">Print Bill</button>
+      </div>
+
+      <div id="categoryDiv" class="add-section">
+        <h2>Add or Remove Category</h2>
+
+        <div class="input-group">
+          <label for="categoryInput">Category Name</label>
+          <input type="text" id="categoryInput" />
+        </div>
+
+        <div class="action-buttons">
+          <button id="addCatBtn">Add Category</button>
+          <button id="removeCatBtn">Remove Category</button>
+        </div>
+
+        <div id="categoryMessage" class="message" style="display: none"></div>
+
+        <h3>Existing Categories</h3>
+
+        <ul id="categoryList"></ul>
+
+        <p
+          id="noCategoryMessage"
+          class="empty-list-message"
+          style="display: none"
+        >
+          No categories added yet.
+        </p>
+      </div>
+
+      <div id="productDiv" class="add-section">
+        <h2>Add Product</h2>
+
+        <div class="input-group">
+          <label for="productNameInput">Product Name</label>
+          <input type="text" id="productNameInput" />
+        </div>
+
+        <div class="input-group">
+          <label for="productCategorySelect">Product Category</label>
+          <select id="productCategorySelect"></select>
+        </div>
+
+        <div class="input-group">
+          <label for="productQuantityInput">Quantity</label>
+          <input type="number" id="productQuantityInput" />
+        </div>
+
+        <div class="input-group">
+          <label for="productPriceInput">Price</label>
+          <input type="number" step="0.01" id="productPriceInput" />
+        </div>
+
+        <div class="input-group">
+          <label for="productImageInput">Product Image</label>
+          <input type="file" id="productImageInput" accept="image/*" />
+        </div>
+        <button id="addProductFinalBtn">Add Product</button>
+        <div id="productMessage" class="message" style="display: none"></div>
+
+        <h3>Product List</h3>
+
+        <ul id="productList"></ul>
+
+        <p
+          id="noProductMessage"
+          class="empty-list-message"
+          style="display: none"
+        >
+          No products added yet.
+        </p>
+      </div>
+
+      <div id="searchDiv" class="add-section">
+        <h2>Search Product</h2>
+
+        <div class="input-group">
+          <label for="searchNameInput">Product Name</label>
+          <input
+            type="text"
+            id="searchNameInput"
+            placeholder="Enter product name"
+          />
+        </div>
+        <button id="searchProductFinalBtn">Search</button>
+        <div id="searchResultMessage"></div>
+      </div>
+
+      <div id="billingDiv" class="add-section" style="display: none">
+        <h2>Generate Bill</h2>
+
+        <div class="input-group">
+          <label for="billProductSelect">Select Product</label>
+
+          <select id="billProductSelect"></select>
+        </div>
+
+        <div class="input-group">
+          <label for="billQuantityInput">Quantity</label>
+          <input type="number" id="billQuantityInput" min="1" />
+        </div>
+        <button id="addToBillBtn">Add to Bill</button>
+        <div id="billItems">
+          <h3>Bill Items</h3>
+
+          <ul id="billList"></ul>
+        </div>
+
+        <div id="billTotal">
+          <h3>Total: <span id="billTotalAmount">0.00</span></h3>
+        </div>
+        <button id="generateBillBtn">Generate Bill</button>
+      </div>
+    </div>
+
+    <div class="home-product-display">
+      <h2>Latest Products</h2>
+
+      <div id="homeProductList" class="product-grid"></div>
+
+      <p
+        id="noProductsHomeMessage"
+        class="empty-list-message"
+        style="display: none"
+      >
+        No products available.
+      </p>
+    </div>
+
+    <script src="home.js"></script>
+  </body>
+</html>

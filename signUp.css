@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("background.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    opacity: 80% ;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+    border-radius: 25px;
+    background-color: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+.form-container {
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    position: relative;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: black;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #6d6a6a;
+    margin-top: 5px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background-color: rgb(233, 229, 229);
+    border-radius: 50px;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.input-group i {
+    color: black;
+    margin-right: 15px;
+}
+
+.input-group input {
+    border: none;
+    background: none;
+    outline: none;
+    flex-grow: 1;
+    padding: 15px 0;
+    color: black;
+}
+
+.input-group input::placeholder {
+    color: grey;
+}
+
+.error-message {
+    color: red;
+    font-size: 13.6px;
+    margin-top: 5px;
+    padding-left: 20px;
+    display: none; 
+}
+
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    color: black;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: black;
+}
+
+.signup-btn {
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #333333;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14.4px;
+    color: #6d6a6a;
+}
+
+.login-link span {
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
